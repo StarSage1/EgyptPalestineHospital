@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Patients List</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+
+  
+  <link href="assets/css/style1.css" rel="stylesheet">
+
+  
+</head>
+
+<body>
+
+  <div id="topbar" class="d-flex align-items-center fixed-top">
+    <div class="container d-flex justify-content-between">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope"></i> <a href="mailto:contact@example.com">egyptpalestine@egmail.com</a>
+        <i class="bi bi-phone"></i> +022 218541
+      </div>
+      <div class="d-none d-lg-flex social-links align-items-center">
+        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="index.html">Egypt Palestine / Admin </a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
+          <li><a class="nav-link scrollto" href="index.html#about">About</a></li>
+          <li><a class="nav-link scrollto" href="index.html#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="index.html#departments">Departments</a></li>
+          <li><a class="nav-link scrollto" href="index.html#doctors">Doctors</a></li>
+          <li><a class="nav-link scrollto underline-me" href="login.html" id="login-link">Log In</a></li>
+          <li><a class="nav-link scrollto" href="index.html#contact">Contact</a></li>
+          <li><a class="nav-link scrollto" href="admin_login.html">Admin</a></li>
+
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+     
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Our Team Section ======= -->
+    
+
+    <!-- ======= Manage Employees Section ======= -->
+
+<!-- ======= Manage Employees Section ======= -->
+<section class="manage-employees">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card">
+          <div class="card-header">
+            <div class="search-bar text-center">
+              <input type="text" placeholder="Search..." onkeyup="searchdoc()" id="searchInput">
+              <button class="btn btn-primary" id="search-btn">Search</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="employee-list">
+              <table class="table" id="Doctortable">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>age</th>
+                    <th>gender</th>
+                    <th>Room Number</th>
+                    <th>Admission Date</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr id="1">
+                    <td>1</td>
+                    <td>John Doe</td>
+                    <td>John.Doe@gmail.com</td>
+                    <td>70</td>
+                    <td>Male</td>
+                    <td>201</td>
+                    <td>2023-5-15</td>
+                    <td>
+                      <button class="btn btn-primary" onclick="editRow(this)">Update</button>
+                      <button class="btn btn-danger" onclick="deleteDoctor('1')">Delete</button>
+                    </td>
+                  </tr>
+                  <tr id="2">
+                    <td>2</td>
+                    <td>Jane Smith</td>
+                    <td>Jane.smith@gmail.com</td>
+                    <td>30</td>
+                    <td>Female</td>
+                    <td>200</td>
+                    <td>2023-10-10</td>
+                    <td>
+                      <button class="btn btn-primary" onclick="editRow(this)">Update</button>
+                      <button class="btn btn-danger" onclick="deleteDoctor('2')">Delete</button>
+                    </td>
+                  </tr>
+                  <tr id="3">
+                    <td>3</td>
+                    <td>Michael Johnson</td>
+                    <td>michael.johnson@gmail.com</td>
+                    <td>50</td>
+                    <td>Female</td>
+                    <td>202</td>
+                    <td>2023-10-15</td>
+                    
+                    <td>
+                      <button class="btn btn-primary" onclick="editRow(this)">Update</button>
+                      <button class="btn btn-danger" onclick="deleteDoctor('3')">Delete</button>
+                    </td>
+                  </tr>
+                  <tr id="4">
+                    <td>4</td>
+                    <td>Samantha Lee</td>
+                    <td>samantha.lee@gmail.com</td>
+                    <td>65</td>
+                    <td>Female</td>
+                    <td>205</td>
+                    <td>2023-10-22</td>
+                    
+                    <td>
+                      <button class="btn btn-primary" onclick="editRow(this)">Update</button>
+                      <button class="btn btn-danger" onclick="deleteDoctor('4')">Delete</button>
+                    </td>
+                  </tr>
+                  <tr id="5">
+                    <td>5</td>
+                    <td>David Kim</td>
+                    <td>david.kim@gmail.com</td>
+                    <td>45</td>
+                    <td>Male</td>
+                    <td>207</td>
+                    <td>2023-9-15</td>
+                    
+
+                    <td>
+                      <button class="btn btn-primary" onclick="editRow(this)">Update</button>
+                      <button class="btn btn-danger" onclick="deleteDoctor('5')">Delete</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="add-employee">
+              <div class="card" id="adddoctor" style="display: none;">
+                <div class="card-header text-center" style="font-weight: bold;">
+                  Add Doctor
+                </div>
+                <div class="card-body">
+                  <form id="adddoctorform">
+                    <div class="form-group">
+                      <label for="name">Name:</label>
+                      <input type="text" class="form-control" id="name" name="name">
+                    </div>
+                    <div class="form-group">
+                      <label for="email">Email:</label>
+                      <input type="email" class="form-control" id="email" name="email">
+                    </div>
+                    <div class="form-group">
+                      <label for="department">Age:</label>
+                      <input type="number" class="form-control" id="department" name="department">
+                    </div>
+                    <div class="form-group">
+                        <label for="office">Gender:</label>
+                        <select class="form-control" id="office" name="office">
+                          <option value="" selected disabled>Select Gender</option>
+                          <option value="male">Male</option>
+                          <option value="female">Female</option>
+                        </select>
+                      </div>                      
+                    <div class="form-group">
+                      <label for="start_time">Room Number:</label>
+                      <input type="number" class="form-control" id="start_time" name="start_time">
+                    </div>
+                    <div class="form-group">
+                      <label for="end_time">Admission Date:</label>
+                      <input type="date" class="form-control" id="end_time" name="end_time">
+                    </div>
+                    <div class="text-center" style="margin-top: 10px;">
+                      <button class="btn btn-success" style="margin: 10px;" type="submit">Save</button>
+                      <button class="btn btn-danger"  style="margin: 10px;" type="button" onclick="hideadddoctor()">Cancel</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <button class="btn btn-success"  style="margin-top: 20px;" id="add-employee-btn" onclick="showadddoctor()">Add Patient</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <!-- Manage Employees Section -->
+
+  </main><!-- End #main -->
+
+  <div class="container d-md-flex py-4">
+
+    <div class="me-md-auto text-center text-md-start">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Egypt Palestine</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/medilab-free-medical-bootstrap-theme/ -->
+       
+      </div>
+    </div>
+    <div class="social-links text-center text-md-right pt-3 pt-md-0">
+      <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+      <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+      <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+      <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+      <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+    </div>
+  </div>  
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script src="script.js"></script>
+  </script>
+
+</body>
+
+</html>
